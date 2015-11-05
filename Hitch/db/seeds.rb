@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+guy = Guy.create({ username: "jim", password_digest: "jim"})
+girl = Girl.create({ guy_id: 1, profile_picture: "test" })
+hitcher = Hitcher.create({ username: "bob", password_digest: "bob" })
+response = Response.create({ girl_id: 1, hitcher_id: 1, response_description: "testing description", hitcher_rating: 5 })
