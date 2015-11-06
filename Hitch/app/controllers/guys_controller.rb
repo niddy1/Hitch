@@ -54,6 +54,8 @@ class GuysController < ApplicationController
       from: "+17817057148",
       body: message
     )
+
+    redirect_to "/guys/profile"
   end
 
 
