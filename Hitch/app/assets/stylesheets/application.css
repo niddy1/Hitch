@@ -22,7 +22,7 @@
 .profile-description{
   width: 200px;
   height: 300px;
-  border: black solid 1px;
+
 }
 
 .profile-girl-response{
@@ -35,4 +35,14 @@
 .profile-girl-display{
   list-style: none;
   margin-left: 5%;
+}
+.hitcher-response-form{
+  margin-left: 5%;
+}
+.logout-link{
+  width: 150px;
+  right: 75%;
+}
+.welcome-back{
+
 }

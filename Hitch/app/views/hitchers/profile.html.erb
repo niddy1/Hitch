@@ -1,14 +1,25 @@
-<h3>welcome back <%= @hitcher.username%></h3>
-<%= button_to "Log Out", '/sessions', method: :delete%>
+<h3 class="welcome-back">Welcome Back <%= @hitcher.username.capitalize%>!!</h3>
 
+<span class="logout-link"><%= button_to "Log Out", '/sessions', method: :delete%></span>
 <% @girl.each do |x| %>
 
-<h3> <%= x.profile_picture %> </h3>
 
-<form action = "/response" method = "get">
+<li class="profile-girl-display">
+  <span class="profile-girl-name"><%=x.name%></span>
+  <div>
+    <img class="profile-picture"src="<%=x.profile_picture%>" alt="" />
+    screenshots: <img class="profile-description"src="<%=x.description_1%>" alt="" />
+    <img class="profile-description" src="<%=x.description_2%>" alt="" />
+    <img class="profile-description" src="<%=x.description_3%>" alt="" />
+  </div>
+
+</li>
+<br>
+
+<form class="hitcher-response-form"action = "/response" method = "get">
 	<input type = "text" placeholder = "Add Your Comment" name = "response_description"></input>
 	<input type = "hidden" name = "girl_id" value = <%= x.id %> ></input>
 	<input type = "submit"></input>
 </form>
-
+<br><br>
 <% end %>
