@@ -5,4 +5,10 @@
 
 <h3> <%= x.profile_picture %> </h3>
 
+<form action = "/response" method = "get">
+	<input type = "text" placeholder = "Add Your Comment" name = "response_description"></input>
+	<input type = "hidden" name = "girl_id" value = <%= x.id %> ></input>
+	<input type = "submit"></input>
+</form>
+
 <% end %>

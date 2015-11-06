@@ -25,6 +25,18 @@ class HitchersController < ApplicationController
       end
   end
 
+  def responses
+    response = Response.create(response_params)
+    @hitcher = Hitcher.find(session[:hitcher_id])
+    if params["girl_id"]
+      girl = Girl.find(params["girl_id"])
+      response[:response_description] = params["response_description"]
+      response[:hitcher_id] = @hitcher.id
+      girl.responses << response
+      redirect_to "/hitchers/profile"
+    end
+  end
+
   # get '/users/log_in' => 'users#log_in', as: :log_in
   def log_in
   end
@@ -41,6 +53,10 @@ class HitchersController < ApplicationController
 
   def hitcher_params
       params.require(:hitcher).permit(:username, :password, :phone_number)
+  end
+
+  def response_params
+    params.permit(:response).permit(:response_description, :girl_id, :hitcher_id, :hitcher_rating)
   end
 
 end
