@@ -20,6 +20,7 @@ class GuysController < ApplicationController
   def profile
       if session[:guy_id]
         @guy = Guy.find(session[:guy_id])
+        @girls = Girl.where(guy_id: @guy.id)
       else
         redirect_to log_in_path
       end
