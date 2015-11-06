@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   get '/hitchers/log_in' => 'hitchers#log_in', as: :log_in2
   resources :hitchers, only: [:new, :create]
 
+  post '/girls' => 'girls#create'
+
+
   post '/sessions' => 'sessions#create'
   delete '/sessions' => 'sessions#destroy'
   # You can have the root of your site routed with "root"

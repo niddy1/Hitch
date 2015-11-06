@@ -1,2 +1,13 @@
 <h3>welcome back <%= @guy.username%></h3>
 <%= button_to "Log Out", '/sessions', method: :delete%>
+
+<h4>Add a girl</h4>
+
+<form class="create-girl-form" action="/girls" method="post">
+  <input type="text" name="girl[profile_picture]" placeholder="...profile_picture">
+  <input type="text" name="girl[description_1]" placeholder="...description_1">
+  <input type="text" name="girl[description_2]" placeholder="...description_2">
+  <input type="text" name="girl[description_3]" placeholder="...description_3">
+  <input type="hidden" name="girl[guy_id]" value="<%=@guy.id%>">
+  <input type="submit" value="Add Girl">
+</form>
