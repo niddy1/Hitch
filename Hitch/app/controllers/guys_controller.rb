@@ -40,19 +40,19 @@ class GuysController < ApplicationController
   # end
 
   def twilio
-    account_sid = #{ENV['account_sid']}
-    auth_token = #{ENV['auth_token']}
+    account_sid = "ACe1f547dd3e87f9e6d1204f26d4a51b9c"
+    auth_token = "a9fd4da02e211a79d920401901d7fe8a"
 
     @client = Twilio::REST::Client.new account_sid, auth_token
 
     @guy = Guy.find(session[:guy_id])
     @girl = params["phone_number"]
-    @message = params["message"]
+    message = params["message"]
 
     @message = @client.messages.create(
       to: @girl,
-      from: @guy[:phone_number],
-      body: @message
+      from: "+17817057148",
+      body: message
     )
   end
 
