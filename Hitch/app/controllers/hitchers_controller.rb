@@ -1,0 +1,2 @@
+class HitchersController < ApplicationController
+end
