@@ -30,6 +30,11 @@
   </li>
   <%g.responses.each do |r|%>
     <li class="profile-girl-response"><%=r.response_description%></li>
+    <form action = "/twilio" method = "get">
+			<input type = "hidden" name = "phone_number" value = <%= g.phone_number %> ></input>
+			<input type = "hidden" name = "message" value = <%=r.response_description%> ></input>
+			<input type = "submit" value = "Send Text Now"></input>
+		</form>
   <%end%>
   <br><br>
 
