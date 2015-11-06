@@ -14,7 +14,7 @@ end
 private
 
 def girl_params
-    params.require(:girl).permit(:description_1, :description_2, :description_3, :profile_picture, :guy_id)
+    params.require(:girl).permit(:name, :phone_number, :description_1, :description_2, :description_3, :profile_picture, :guy_id)
 
 end
 

@@ -1,28 +1,37 @@
-<h3>welcome back <%= @guy.username%></h3>
+<h3>Welcome Back <%= @guy.username.capitalize%>!!</h3>
 <%= button_to "Log Out", '/sessions', method: :delete%>
 
 <h4>Add a girl</h4>
 
 <form class="create-girl-form" action="/girls" method="post">
+  <input type="text" name="girl[name]" placeholder="...name">
+  <input type="text" name="girl[phone_number]" placeholder="...phone number">
   <input type="text" name="girl[profile_picture]" placeholder="...profile_picture">
   <input type="text" name="girl[description_1]" placeholder="...description_1">
   <input type="text" name="girl[description_2]" placeholder="...description_2">
   <input type="text" name="girl[description_3]" placeholder="...description_3">
+
   <input type="hidden" name="girl[guy_id]" value="<%=@guy.id%>">
   <input type="submit" value="Add Girl">
 </form>
+<br><br>
 
 
-<h4>all my girls</h4>
 <%@girls.each do |g|%>
-<li>
+  <li class="profile-girl-display">
+    <span class="profile-girl-name"><%=g.name%></span>
+    <div>
+      <img class="profile-picture"src="<%=g.profile_picture%>" alt="" />
+      screenshots: <img class="profile-description"src="<%=g.description_1%>" alt="" />
+      <img class="profile-description" src="<%=g.description_2%>" alt="" />
+      <img class="profile-description" src="<%=g.description_3%>" alt="" />
+    </div>
 
-Picture: <img src="<%=g.profile_picture%>" alt="" />
-screenshots: <img src="<%=g.description_1%>" alt="" />
-<img src="<%=g.description_2%>" alt="" />
-<img src="<%=g.description_3%>" alt="" />
-</li>
-<li><%=g.responses.response_description%></li>
-<li>SAMPLE TEXT MESSAGE</li>
+  </li>
+  <%g.responses.each do |r|%>
+    <li class="profile-girl-response"><%=r.response_description%></li>
+  <%end%>
+  <br><br>
+
 
 <%end%>

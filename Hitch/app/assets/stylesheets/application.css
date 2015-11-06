@@ -13,3 +13,26 @@
  *= require_tree .
  *= require_self
  */
+
+.profile-picture{
+  width: 200px;
+  height: 300px;
+  border: black solid 2px;
+}
+.profile-description{
+  width: 200px;
+  height: 300px;
+  border: black solid 1px;
+}
+
+.profile-girl-response{
+  font-size: 20px;
+    margin-left: 5%;
+}
+.profile-girl-name{
+  font-size: 25px;
+}
+.profile-girl-display{
+  list-style: none;
+  margin-left: 5%;
+}
