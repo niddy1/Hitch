@@ -19,6 +19,7 @@ class HitchersController < ApplicationController
   def profile
       if session[:hitcher_id]
         @hitcher = Hitcher.find(session[:hitcher_id])
+        @girl = Girl.all
       else
         redirect_to log_in2_path
       end

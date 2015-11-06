@@ -1,2 +1,8 @@
 <h3>welcome back <%= @hitcher.username%></h3>
 <%= button_to "Log Out", '/sessions', method: :delete%>
+
+<% @girl.each do |x| %>
+
+<h3> <%= x.profile_picture %> <h3>
+
+<% end %>
