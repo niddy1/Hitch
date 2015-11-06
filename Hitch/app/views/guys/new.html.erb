@@ -1,12 +1,44 @@
-<h3>Guy signup form</h3>
+<div class="signin-div">
+  <div class="contents">
 
 
-<%= form_for @guy do |f| %>
-            <%= f.label :username %>
-            <%= f.text_field :username %>
-            <%= f.label :password %>
-            <%= f.password_field :password %>
-            <%= f.label :phone_number %>
-            <%= f.text_field :phone_number %>
-            <%= f.submit %>
-        <% end %>
+    <h3>Single Signup</h3>
+
+
+    <%= form_for @guy do |f| %>
+                <%= f.label :username %>
+                <%= f.text_field :username %>
+                <%= f.label :password %>
+                <%= f.password_field :password %>
+                <%= f.label :phone_number %>
+                <%= f.text_field :phone_number %>
+                <%= f.submit %>
+            <% end %>
+
+
+  </div>
+</div>
+        <style media="screen">
+          body{
+            background: url("http://i.imgur.com/qQPEjQe.png");
+        /*background-color: grey;*/
+            background-repeat: no-repeat;
+            background-size: cover;
+
+          }
+
+          .signin-div{
+            background-color: white;
+            width: 50%;
+            height: 180px;
+            border-radius: 25px;
+            border-top: 20%;
+            margin-top: 20%;
+            margin-left: 20%;
+          }
+
+          .contents{
+            top: 10%;
+            margin-left: 5%;
+          }
+        </style>

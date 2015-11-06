@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get '/guys/profile' => 'guys#profile', as: :profile
   get '/guys/log_in' => 'guys#log_in', as: :log_in
   get '/response' => 'hitchers#responses'
-   get '/twilio' => 'guys#twilio'
+  get '/twilio' => 'guys#twilio'
   resources :guys, only: [:new, :create]
 
   get '/hitchers/profile' => 'hitchers#profile', as: :profile2
