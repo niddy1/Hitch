@@ -1,0 +1,12 @@
+<h3>Hitcher signup form</h3>
+
+
+<%= form_for @hitcher do |f| %>
+            <%= f.label :username %>
+            <%= f.text_field :username %>
+            <%= f.label :password %>
+            <%= f.password_field :password %>
+            <%= f.label :phone_number %>
+            <%= f.text_field :phone_number %>
+            <%= f.submit %>
+        <% end %>

@@ -1,5 +1,5 @@
 class Hitcher < ActiveRecord::Base
-  #has_secure_password
+  has_secure_password
   has_many :responses
   has_many :girls, :through => :responses
 
