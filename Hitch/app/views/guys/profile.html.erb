@@ -11,3 +11,18 @@
   <input type="hidden" name="girl[guy_id]" value="<%=@guy.id%>">
   <input type="submit" value="Add Girl">
 </form>
+
+
+<h4>all my girls</h4>
+<%@girls.each do |g|%>
+<li>
+
+Picture: <img src="<%=g.profile_picture%>" alt="" />
+screenshots: <img src="<%=g.description_1%>" alt="" />
+<img src="<%=g.description_2%>" alt="" />
+<img src="<%=g.description_3%>" alt="" />
+</li>
+<li><%=g.responses.response_description%></li>
+<li>SAMPLE TEXT MESSAGE</li>
+
+<%end%>
