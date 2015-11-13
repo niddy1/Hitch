@@ -46,3 +46,9 @@
 .welcome-back{
 
 }
+h3 {
+  text-align: center;
+}
+body{
+  background-color: lightgrey;
+}

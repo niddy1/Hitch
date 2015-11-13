@@ -2,7 +2,7 @@
   <div class="contents">
 
 
-    <h3>Single Signup</h3>
+    <h3>Single's Sign Up</h3>
 
 
     <%= form_for @guy do |f| %>
@@ -10,9 +10,10 @@
                 <%= f.text_field :username %>
                 <%= f.label :password %>
                 <%= f.password_field :password %>
+                <br>
                 <%= f.label :phone_number %>
-                <%= f.text_field :phone_number %>
-                <%= f.submit %>
+                <%= f.text_field :phone_number %>&nbsp&nbsp&nbsp&nbsp&nbsp
+                <%= f.submit "Create Profile"%>
             <% end %>
 
 
@@ -29,9 +30,9 @@
 
           .signin-div{
             background-color: rgba(255, 255, 255, 0.5);
-            width: 50%;
+            width: 55%;
             height: 180px;
-            /*border-radius: 25px;*/
+            padding-top: 1%;
             border-top: 20%;
             margin-top: 20%;
             margin-left: 20%;
