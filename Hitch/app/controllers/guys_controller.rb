@@ -40,8 +40,8 @@ class GuysController < ApplicationController
   # end
 
   def twilio
-    account_sid = "ACe1f547dd3e87f9e6d1204f26d4a51b9c"
-    auth_token = "a9fd4da02e211a79d920401901d7fe8a"
+    account_sid = 
+    auth_token = 
 
     @client = Twilio::REST::Client.new account_sid, auth_token
 
